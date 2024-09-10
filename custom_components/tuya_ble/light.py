@@ -505,7 +505,7 @@ def get_mapping_by_device(device: TuyaBLEDevice) -> tuple[TuyaLightEntityDescrip
         if product_mapping_overrides is not None:
              return update_mapping(category_mapping, product_mapping_overrides)
              
-    return category_mapping
+    return [] # ERROR (MainThread) [homeassistant.components.light] Error while setting up tuya_ble platform for light
 
 
 class TuyaBLELight(TuyaBLEEntity, LightEntity):
